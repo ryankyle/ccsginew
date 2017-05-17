@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="theme-color" content="#2196f3">
+    <title>College of Computer Science DMMMSU-SLUC</title>
+    <link rel="stylesheet" href="build/css/framework7.material.css">
+    <link rel="stylesheet" href="build/css/framework7.material.colors.css">
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+    <link rel="stylesheet" href="css/kitchen-sink.css">
+    <link rel="icon" href="img/ccslogo.png">
+  </head>
+  <body onload="check_session();" class="theme-pink">
+    <div class="statusbar-overlay"></div>
+    <div class="panel-overlay"></div>
+    <div class="panel panel-left panel-cover">
+      <div class="view navbar-fixed">
+        <div class="pages">
+          <div data-page="panel-left" class="page">
+            <div class="navbar">
+              <div class="navbar-inner">
+                <div class="center">Menu</div>
+              </div>
+            </div>
+            <div class="page-content">
+              <!--<div class="content-block-title">Framework7 Kitchen Sink</div>-->
+              <div class="list-block">
+                <ul>
+                  <!--<li>
+				  <a href="pages/register.html" class="item-link close-panel">
+                    <div class="item-content">
+                        <div class="item-media"><i class="icon icon-f7"></i></div>
+                        <div class="item-inner">
+                          <div class="item-title">Register Student</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>-->
+				  <li>
+				  <a href="index.html" class="item-link close-panel" onclick="localStorage.clear();">
+                    <div class="item-content">
+                        <!--<div class="item-media"><i class="icon icon-f7"></i></div>-->
+                        <div class="item-inner">
+                          <div class="item-title">Logout</div>
+                        </div>
+                    </div>
+				  </a>
+				  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="views">
+      <div class="view view-main">
+        <div class="pages navbar-fixed">
+          <div data-page="index" class="page">
+            <div class="page-content">
+				
+				<div class="login-screen-title"><br><img src="img/ccslogo.png" width="90" height="90"><h4 class="color-pink" style="margin-top: -1%;">CCS MY GRADE</h4><h6 class="color-bluegray" style="margin-top: -15%;">MOBILE</h6></div>
+			
+              <!--<div class="content-block-title">Welcome To Framework7</div>-->
+              <div class="content-block">
+				<a href="pages/loginstudent.html" class="button button-raised button-fill color-pink">
+					Student
+				</a>
+			  </div>
+              
+			  <div class="content-block">
+				<a href="pages/loginteacher.html" class="button button-raised button-fill color-pink">
+					Teacher
+				</a>
+			  </div>
+			  
+			  <div class="content-block" style="display: none;">
+				<a href="pages/loginchairman.html" class="button button-raised button-fill color-pink">
+					Chairman
+				</a>
+			  </div>
+			  
+			  
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+    <div class="login-screen">
+      <div class="view">
+        <div class="page">
+          <div class="page-content login-screen-content">
+            <div class="login-screen-title">Framework7</div>
+            <form>
+              <div class="list-block inputs-list">
+                <ul>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Username</div>
+                      <div class="item-input">
+                        <input type="text" name="username" placeholder="Your username">
+                      </div>
+                    </div>
+                  </li>
+                  <li class="item-content">
+                    <div class="item-inner">
+                      <div class="item-title label">Password</div>
+                      <div class="item-input">
+                        <input type="password" name="password" placeholder="Your password">
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="content-block"><a href="#" class="button button-big">Sign In</a></div>
+              <div class="content-block">
+                <div class="list-block-label">Some text about login information.<br>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-teachersidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+			<!--<li><a href="pages/helpteacher.html" class="list-button item-link close-popover">Help</a></li>-->
+            <li><a href="pages/teachersetting.html" onclick="teachersetting();" class="list-button item-link close-popover">Account</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-studentsidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+            <!--<li><a href="pages/helpstudent.html" class="list-button item-link close-popover">Help</a></li>-->
+			<li><a href="pages/studentsetting.html" onclick="studentsetting();" class="list-button item-link close-popover">Account</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+	<div class="popover popover-chairmansidemenu">
+      <div class="popover-inner">
+        <div class="list-block">
+          <ul>
+			<!--<li><a href="pages/helpparent.html" class="list-button item-link close-popover">Help</a></li>-->
+            <li><a href="pages/chairmansetting.html" onclick="chairmansetting();" class="list-button item-link close-popover">Account</a></li>
+            <li><a href="index.html" class="list-button item-link color-red close-popover" onclick="localStorage.clear();">Logout</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+	
+    <script type="text/javascript" src="build/js/framework7.js"></script>
+    <script type="text/javascript" src="js/kitchen-sink.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+  </body>
+</html>

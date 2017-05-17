@@ -1,0 +1,43 @@
+
+<div data-page="addstudent" class="page">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="left"><a href="#" class="back link icon-only"><i class="icon icon-back"></i></a></div>
+      <div class="center">Add to Section</div>
+      <div class="right"><a href="#" class="link icon-only open-popover" data-popover=".popover-teachersidemenu"><i class="icon icon-bars"></i></a></div>
+    </div>
+  </div>
+  
+  <form data-search-list=".search-here" data-search-in=".item-title" class="searchbar searchbar-init">
+    <div class="searchbar-input">
+      <input type="search" placeholder="Search Student"/><a href="#" class="searchbar-clear"></a>
+    </div>
+  </form>
+  <div class="searchbar-overlay"></div>
+  
+  <div class="page-content">
+    
+	<!--<div class="content-block">
+    <p class="buttons-row">
+		<a href="#" class="button back link">Discard</a>
+		<a href="#" class="button button-fill color-pink" disabled>Add</a>
+	</p>
+	</div>-->
+	
+	<div class="list-block searchbar-not-found">
+      <ul>
+        <li class="item-content">
+          <div class="item-inner">
+            <div class="item-title">Student not found</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+	
+    <div class="list-block search-here searchbar-found">
+      <ul>
+		<div id="displaystudents"></div>
+      </ul>
+    </div>
+  </div>
+</div>
